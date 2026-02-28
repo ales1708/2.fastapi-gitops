@@ -1,6 +1,3 @@
-# Custom values for production deployment with HPA enabled.
-# Usage: helm install my-release ./helm/fastapi-gitops-starter -f custom-values.yaml
-
 replicaCount: 1
 
 ingress:
