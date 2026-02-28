@@ -1,0 +1,26 @@
+replicaCount: 1
+
+ingress:
+  enabled: true
+  hosts:
+    - host: minikube.test
+      paths:
+        - path: /GitOps-Starter
+          pathType: Prefix
+
+app:
+  rootPath: "/GitOps-Starter"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 10
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
