@@ -30,6 +30,7 @@ repos:
     rev: v1.5.0
     hooks:
       - id: detect-secrets
+        exclude: '(external-services-values/|helm/fastapi-gitops-starter/)'
 
   # Code style - linting with Ruff
   - repo: https://github.com/astral-sh/ruff-pre-commit
